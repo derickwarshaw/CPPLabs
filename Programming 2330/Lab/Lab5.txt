@@ -1,0 +1,53 @@
+Problem: Create check out register simulation that allows input of item codes to obtain selling prices and descriptions. If incorrect code is entered then error message is put on the screen.
+	 If the item is found - the quantity of items should be entered. Once all items and quantities have been entered the user should end the transaction by entering item code 0.
+	 The program should build a sales slip called Sales.txt that includes item code, description, unit price, quantity purchased, and total extended price.
+	 The bill will include subtotal and 8% tax added for a final total bill. The amount tendered by the customer and the change given will also be added to the invoice.
+	 The invoice should be written out to an output file called Sales.txt.
+Inputs: item code, quantity, Stock.txt file, cash tendered
+Outputs: final bill, cash tendered, change, item code, item description, price, Sales.txt file
+Formulas: change = cash tendered - (running total + (running total * .08))
+
+start
+SET user item code = 9999
+REPEAT 8 times
+	INPUT from Stock.txt item code
+	INPUT from Stock.txt item name
+	INPUT from Stock.txt price
+END-REPEAT
+REPEAT as long as the user hasn't entered a 0
+	INPUT item code from user
+	SET found flag = false
+	REPEAT as long as the number of repeats are less than 9 and the user didn't enter 0 for an item code
+	IF user code matches an item code that was in Stock.txt
+		SET found flag = true
+		DISPLAY item code
+		DISPLAY item name
+		DISPLAY item price
+		INPUT quantity from user
+		CALCULATE total cost for item and quantity of that item
+		CALCULATE running total to include that item
+		OUTPUT to Sales.txt quantity
+		OUTPUT to Sales.txt item code
+		OUTPUT to Sales.txt number of items at price per item
+	END-IF
+	END-REPEAT
+	IF user entered a 0
+		OUTPUT to Sales.txt subtotal
+		OUTPUT to Sales.txt tax
+		OUTPUT to Sales.txt final bill
+		INPUT cash tendered
+		IF customer didn't pay enough money for items
+			DISPLAY error and void transaction
+			OUTPUT to Sales.txt error message and void transaction
+			stop processing
+		END-IF
+		IF customer has no change or has some change
+			OUTPUT to Sales.txt the amount of change given
+			stop processing
+		END-IF
+	IF found flag is still set to false
+			DISPLAY item not found message
+	END-IF
+	END-IF
+END-REPEAT	
+stop processing

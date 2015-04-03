@@ -1,0 +1,20 @@
+Problem: Write program that accepts positive integer and display the product of all positive 
+	 integers up to and including that number
+Inputs: integer
+Outputs: product of all positive integers up to and including user provided integer
+Formulas: none
+
+start
+SET bucket to zero
+GET integer
+REPEAT while integer is less than 1
+	DISPLAY error message - cannot enter less than one
+	GET integer
+END-REPEAT
+REPEAT as long as counter is less than or equal to the integer that user specified	
+	SET counter to 1
+	SET result to 1
+	CALCULATE result * counter and place product of calculation back into result
+	ADD 1 to counter
+END-REPEAT
+DISPLAY result

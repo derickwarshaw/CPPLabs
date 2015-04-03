@@ -1,0 +1,43 @@
+Problem: Count the number of numbers entered and display that number, sum the numbers entered and display that sum,  count the number of positive, negative, and zero entries and display those counts
+	 find the number entered the most times in a row and display what that number is and how many times it was entered.
+Inputs: user number entry, sentinal value to end entry submission
+Outputs: how many numbers were entered, sum of numbers entered, how many positive entries, how many negative entries, how many zero entries, number entered the most times in a row and how many times it was entered
+Formulas: NONE
+
+SET entry counter equal to zero	
+SET positive number counter equal to zero
+SET zero number counter equal to zero
+SET negative number counter equal to zero
+SET entry sum accumulator equal to zero
+SET entry occurence counter equal to zero
+SET alpha entry equal to 9999
+SET beta entry equal to zero
+INPUT user number entry
+SET entry occurance counter equal to itself plus one
+REPEAT as long as user entry is not equal to 9999
+	SET entry counter equal to entry counter plus one
+	SET entry sum accumulator equal to entry sum accumulator plus the user entry
+	IF user entry is greater than zero
+		SET positive number counter equal to positive number counter plus one
+	END-IF
+	IF user entry is equal to zero
+		SET zero number counter equal to zero counter plus one
+	END-IF
+	IF user entry is less than zero
+		SET negative number counter equal to zero counter plus one
+	END-IF
+	SET alpha entry to user number entry
+	INPUT user number entry
+	SET beta entry equal to user number entry
+	IF alpha entry is equal to beta entry
+		SET entry occurence counter equal to entry occurence counter plus one
+		SET most entered number accumulator equal to alpha entry
+	END-IF	
+END-REPEAT
+DISPLAY entry sum accumulator
+DISPLAY entry counter
+DISPLAY positive number counter
+DISPLAY negative number counter
+DISPLAY zero number counter
+DISPLAY most entered number accumulator
+DISPLAY entry occurence counter

@@ -1,0 +1,18 @@
+// Derick Warshaw
+// Lab #2 Write a program to compute and print (a) the interest payment at the end of one year and (b) the new bank balance
+// COSC1336 Section 001
+
+Problem: Calculate and display (a) interest payment at the end of one year and (b) the new bank balance
+Inputs: none
+Outputs: interest payment at one year, new bank balance
+Formulas: starting bank balance = 580, interest rate = .025, interest payment at one year = starting bank balance * interest rate,
+	  new bank balance = interest payment at one year + starting bank balance
+
+start
+SET starting bank balance = 580
+SET interest rate = .025
+SET interest payment at one year = starting bank balance * interest rate
+SET new bank balance = interest payment at one year + starting bank balance
+OUTPUT interest payment at one year
+OUTPUT new bank balance
+stop 

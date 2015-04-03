@@ -1,0 +1,85 @@
+Problem: Compute the volume of snow required to build a snowfamily consisting of snowmama, snowpapa, and snowbaby.
+         Each snowman will be composed of three snowballs. The user will enter 3 radii for each snowman.
+         Total volume for snowmama, snowpapa, and snowbaby will be displayed. Total volume for the snow family will be displayed.
+Inputs: radii 
+Outputs: snowmama volume, snowpapa volume, snowbabyvolume, total volume
+Formulas: volume = (4.0/3.0) * (3.14(radii * radii * radii)) 
+
+start processing
+INPUT first radii for snowmama
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT first radii for snowmama
+END-REPEAT
+CALCULATE volume
+SET snowmama volume accumulator = snowmama volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+INPUT second radii for snowmama
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT second radii for snowmama
+END-REPEAT
+CALCULATE volume
+SET snowmama volume accumulator = snowmama volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+INPUT third radii for snowmama
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT third radii for snowmama
+END-REPEAT
+CALCULATE volume
+SET snowmama volume accumulator = snowmama volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+INPUT first radii for snowpapa
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT first radii for snowpapa
+END-REPEAT
+CALCULATE volume
+SET snowpapa volume accumulator = snowpapa volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+INPUT second radii for snowpapa
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT second radii for snowpapa
+END-REPEAT
+CALCULATE volume
+SET snowpapa volume accumulator = snowpapa volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+INPUT third radii for snowpapa
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT third radii for snowpapa
+END-REPEAT
+CALCULATE volume
+SET snowpapa volume accumulator = snowpapa volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+INPUT first radii for snowbaby
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT first radii for snowbaby
+END-REPEAT
+CALCULATE volume
+SET snowbaby volume accumulator = snowbaby volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+INPUT second radii for snowbaby
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT second radii for snowbaby
+END-REPEAT
+CALCULATE volume
+SET snowbaby volume accumulator = snowbaby volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+INPUT third radii for snowbaby
+REPEAT while radii is less than 0.00
+	OUTPUT error message
+	INPUT  third radii for snowbaby
+END-REPEAT
+CALCULATE volume
+SET snowbaby volume accumulator = snowbaby volume accumulator + volume
+SET snowfamily volume accumulator = snowfamily volume accumulator + volume
+OUTPUT snowmama accumulator
+OUTPUT snowpapa accumulator
+OUTPUT snowbaby accumulator
+OUTPUT snowfamily accumulator
+end processing

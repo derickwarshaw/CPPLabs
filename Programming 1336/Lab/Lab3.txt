@@ -1,0 +1,16 @@
+// Derick Warshaw
+// Lab #3 Write a program that computes the batting average of a baseball player when the user inputs the number of hits and the number of at bats for the player
+// COSC1336 Section 001
+
+Problem: Compute batting average for a player when user inputs number of hits and number of at bats. Display results.
+Inputs: hits, at bats
+Outputs: batting average
+Formulas: batting average = number of hits / number of at bats
+
+start
+INPUT hits
+INPUT at bats
+SET batting average = number of hits / number of at bats
+OUTPUT batting average
+stop
+

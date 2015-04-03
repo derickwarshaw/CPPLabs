@@ -1,0 +1,70 @@
+Problem: Create check out register simulation that allows input of item codes to obtain selling prices and descriptions. If incorrect code is entered then error message is put on the screen.
+	 If the item is found - the quantity of items should be entered. Once all items and quantities have been entered the user should end the transaction by entering item code 0.
+	 The program should build a sales slip called Sales.txt that includes item code, description, unit price, quantity purchased, and total extended price.
+	 The bill will include subtotal and 8% tax added for a final total bill. The amount tendered by the customer and the change given will also be added to the invoice.
+	 The invoice should be written out to an output file called Sales.txt.
+Inputs: item code, quantity, Stock.txt file, cash tendered
+Outputs: final bill, cash tendered, change, item code, item description, price, Sales.txt file
+Formulas: change = cash tendered - (running total + (running total * .08))
+
+start processing
+REPEAT as long as user has not entered a zero for item code
+	INPUT item code that user wants to find
+	IF user enters a zero for item code
+		DISPLAY final bill
+		OUTPUT final bill to file
+		INPUT cash tendered
+		CALCULATE change
+		IF change is less than zero
+			DISPLAY message that customer provided insufficient funds
+			stop processing
+		END-IF
+		IF change is equal to zero
+			DISPLAY change
+			OUTPUT to file
+				cash tendered
+				change
+			END-OUTPUT to file
+			stop processing
+		END-IF
+		ELSE
+			DISPLAY change
+			OUTPUT to file
+				cash tendered
+				change
+			END-OUTPUT to file
+			stop processing
+		END-IF
+	END-IF
+	REPEAT not more than one thousand times and as long as the item code entered by the user does not match an item code in the input file
+		INPUT from file 
+			item number
+			description
+			price
+		END-INPUT from file
+		add one to counter
+		IF counter is equal to one thousand
+			DISPLAY error message item code not found
+			SET counter equal to one
+			GET user to enter item code they are searching for
+		END-IF		
+	DISPLAY item code
+	DISPLAY item description
+	DISPLAY price
+	INPUT quantity
+	REPEAT while quantity is less than 0
+		DISPLAY error message quantity cannot be less than 0
+		GET quantity
+	END-REPEAT	
+	SET total cost of item equal to price multiplied by quantity
+	SET running total accumulator equal to itself plus the total cost of item
+	OUTPUT to file
+		quantity
+		item code
+		description
+		price
+	END-OUTPUT to file
+	SET counter equal to 1
+END-REPEAT
+end processing
+

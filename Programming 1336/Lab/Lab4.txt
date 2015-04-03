@@ -1,0 +1,15 @@
+Problem: take user input and calculate square root of input. if non-negative - display. if negative - display message
+	 "The square root of N is not defined" (N is the number that was input)
+Inputs: number
+Outputs: square root of the input number
+Formulas: NONE
+
+start
+INPUT number
+IF number is less than zero 
+	OUTPUT "The square root is not defined"
+ELSE
+	SET square root = the square root of number that was input by user
+	OUTPUT the square root of the number
+END IF
+stop

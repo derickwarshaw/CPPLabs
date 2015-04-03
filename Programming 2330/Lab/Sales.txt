@@ -1,0 +1,39 @@
+--------------------------
+FUNNY STUFF RETAIL INC.
+  www.funnyretail.com
+   Established 2014
+                   
+4503 Funny Way
+Sherman, Texas 75092
+Phone: 903-555-5555
+--------------------------
+                   
+Quantity: 5
+Item Code 1234
+Stockings
+5 units @ $12.39 per item
+
+Quantity: 1
+Item Code 6600
+ToothBrush
+1 units @ $94.55 per item
+
+Quantity: 3
+Item Code 5020
+AluminumPan
+3 units @ $16.79 per item
+
+--------------------------
+Subtotal: 	$   206.87
+Tax: 		$    16.55
+--------------------------
+Final Bill: 	$   223.42
+
+
+Cash Tendered: 	$   250.00
+--------------------------
+Change: 	$    26.58
+ 
+ 
+ 
+Come back soon!

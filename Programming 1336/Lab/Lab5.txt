@@ -1,0 +1,19 @@
+Problem: user enters the month, the day, and the four digit year. Determine if product of month and day is equal to last two digits of year
+Inputs: month, day, year
+Outputs: date is magic, date is not magic
+Formulas: NONE
+
+start
+GET month
+GET day
+GET year
+IF month is less than 1 or more than 12 or day is less than 1 or more than 31 or year is less than 1000 or year is greater than 9999
+	OUTPUT "The data you entered is invalid"
+ELSE 
+	IF month * day is equal to the remainder of the year divided by 100
+		OUTPUT "The date you entered is magic"
+	ELSE
+		OUTPUT "The date you entered is not magic"
+	END IF
+END IF
+stop

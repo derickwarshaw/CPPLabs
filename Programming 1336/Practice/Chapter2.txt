@@ -1,0 +1,105 @@
+Derick Warshaw
+Exercise 2
+Programming 1336
+
+1. one, two, three
+
+2. float temp, weight, age;
+
+3. int months, days, years;
+
+   months = 2
+   years = 3
+
+4. 
+a)b = a + 2
+b)a = b * 4
+c)b = a / 3.14
+d)a = b - 8
+e)a = 27
+f)c = "K"
+g)??? appendix b
+
+5. multi-line
+
+6. single-line
+7. 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "Two mandolins like creatures in the\n";
+	cout << "\ndark\n";
+	cout << "\nCreating the agony of ecstasy.\n";
+	cout << "\n			-George Barker";
+	return 0;
+}
+
+8.
+a)
+0
+100
+
+b)
+8
+2
+
+c)
+I am the incrediblecomputing
+machine
+and I will
+amaze
+you
+
+d)
+Be careful
+This might/n be a trick question
+
+e)
+23
+1
+
+9. c) semicolon
+
+10. c) #include <iostream>
+
+11. b) function main
+
+12. a) #
+
+13. ?? B maybe
+
+14. a) braces
+
+15. b) 72 = amount; // c) profit = 129
+
+16. c) cout < value;
+    d) cout << Programming is great fun;
+
+17. a) 12
+    b) 4
+    c) 2
+    d) 6
+    e) 1
+
+18. a) 3287000
+    b) -978.65 ?? Move decimal to the left since this is negative?
+    c) 7.65491 ?? Move decimal to the left since this is negative
+    d) ??? " "
+
+19. a) Unary
+
+20. c) named constant
+
+21. a) before the compiler compiles your program
+
+22. true
+
+23. false
+
+24. ??
+
+25. true
+
+26. true

@@ -1,0 +1,16 @@
+Problem: input a list of people's ages from the user (terminated by a 0) and find the average age
+Inputs: age
+Outputs: average
+Formulas: average = age / people
+
+start
+INPUT age
+REPEAT as long as age is greater than zero
+	INPUT age
+	REPEAT if age equals less than zero
+		INPUT age
+	END-REPEAT
+END-REPEAT
+SET average = age / people
+DISPLAY average
+stop

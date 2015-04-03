@@ -1,0 +1,43 @@
+Derick Warshaw
+
+6.1 yes
+
+6.2 function header
+
+6.3 I saw Elba
+    Able was I
+
+6.4 void qualify()
+	{
+	cout << "You qualify for the card at an annual interest rate of 12 percent." << endl;
+	}
+    
+    void noQualify()
+	{
+	cout << "You do not qualify for the card due to not meeting criteria." << endl;
+	}
+
+6.5 void showNum(double num) // function header
+
+    void showNum(double);  // function prototype
+
+    showNum(45.67); // function call
+
+6.6 timesTen(int number)
+	cout << number * 10 << endl;
+
+6.7 void timesTen(int);
+
+6.8 
+
+0	0
+1	2
+2	4
+3	6
+4	8
+5	10
+6	12
+7	14
+8	16
+9	18
+

@@ -1,0 +1,93 @@
+Problem:Given that there is a square that is 20x20 in squares with the top row having a value of 100,
+	the bottom row having a value of 32, the 2 sides having a value of 90, an inner area that is 6x6 in squares
+	with a value of 212, and all of the non perimeter or inner squares with a value of 90. Find the average
+	temperature. Stop making passes to find the average when the change is less than .01 .
+Inputs: none
+Outputs: average temperature
+Formulas: change = old value - (top square + bottom square + right side side square + left side square)
+
+start processing
+SET column to 1
+REPEAT as long as the column is less than or equal to 19
+	SET row to 1
+	REPEAT as long as row is less than 18
+		IF row is greater than or equal to 7 and row is less than or equal to 12 and column is greater than 7 and column is less than or equal to 12			
+			SET the square at that row and column to 212.0
+		END-IF
+	INCREMENT row
+	END-REPEAT
+INCREMENT column
+END-REPEAT
+SET column to 1
+REPEAT as long as the column is less than or equal to 19
+	SET row to 1
+	REPEAT as long as row is less than 18
+		IF row is not equal to or greater than 0 and row is not less than or equal to 12 and column is not greater than 7 and column is not less than or equal to 12			
+			SET the square at that row and column to 90.0
+		END-IF
+	INCREMENT row
+	END-REPEAT
+INCREMENT column
+END-REPEAT
+SET column to 0
+REPEAT as long as the column is less than or equal to 19
+	SET row to 1
+	REPEAT as long as row is less than 19
+		IF row is equal to 0 and row is less than or equal to 19			
+			SET the square at that row and column to 100.0
+		END-IF
+	INCREMENT row
+	END-REPEAT
+INCREMENT column
+END-REPEAT
+SET column to 0
+REPEAT as long as the column is equal to 0
+	SET row to 0
+	REPEAT as long as row is less than or equal to 19
+		IF row is  equal to 0 and column is less than or equal to 0
+			SET the square at that row and column to 90.0
+		END-IF
+	INCREMENT row
+	END-REPEAT
+INCREMENT column
+END-REPEAT
+SET column to 19
+REPEAT as long as the column is equal to 19
+	SET row to 0
+	REPEAT as long as row is less than or equal to 19
+		IF row is equal to 0 and column is equal to 0
+			SET the square at that row and column to 90.0
+		END-IF
+	INCREMENT row
+	END-REPEAT
+INCREMENT column
+END-REPEAT
+SET column to 0
+REPEAT as long as the column is less than or equal to 19
+	SET row to 19
+	REPEAT as long as row is equal to 19
+		IF row is  equal to 19 and column is less than or equal to 19
+			SET the square at that row and column to 32.0
+		END-IF
+	INCREMENT row
+	END-REPEAT
+INCREMENT column
+END-REPEAT
+SET flag to true
+REPEAT while flag set to true
+	SET column to 1
+	REPEAT as long as column is less than or equal to 18
+		IF row is greater than 7 and row is less than or equal to 12 and column is greater than 7 and column is less than or equal to 12
+			SET old value = the temperature of that square
+			SET average tempature = the sum of the top, bottom, left, and right squares relative to the square being examined divided by 4
+			IF the old value minus the average value is greater than .01
+				SET flag to true
+			END-IF
+			ELSE-IF the difference between the old value and the average value is less than .01
+				DISPLAY result
+				SET flag to false
+			END-IF
+		END-IF
+	INCREMENT column
+	END-REPEAT
+END-REPEAT

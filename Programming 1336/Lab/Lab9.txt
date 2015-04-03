@@ -1,0 +1,28 @@
+Problem: create a table of the costs, revenue, and profit(or loss) corresponding to range of production levels.
+Inputs: number of production levels to be listed
+Outputs: cost at each level, revenue, profit or loss, average profit or loss
+Formulas: cost = 100,000 + 12 * number of pins , total revenue = number of pins * (1000 - number of pins)
+	 number of pins = 100 * production level, profit or loss = revenue - cost
+
+GET number of production levels to be listed
+REPEAT as long as number of production levels to be listed is < 1
+	DISPLAY error message
+	GET number of production levels to be listed
+END-REPEAT
+SET production level to user specification
+REPEAT until number of production levels set forth by user has been reached	
+	CALCULATE number of pins = 100 * production level
+	CALCULATE cost = 100,000 + 12 * number of pins
+	CALCULATE total revenue = number of pins * (1000 - number of pins) 
+	CALCULATE profit or loss = revenue - cost
+	DISPLAY cost
+	DISPLAY total revenue
+	DISPLAY profit/loss
+	ADD 1 to production level
+	IF number of production levels set forth by user has been reached
+		DISPLAY average profit or loss = (total profit or loss / number of production levels)
+	END-IF
+END-REPEAT
+
+
+

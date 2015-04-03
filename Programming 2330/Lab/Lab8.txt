@@ -1,0 +1,59 @@
+Problem: Create a program that will take text entered and output the text in all uppercase, reverse order, display the number of characters,
+	 and then output it with the first letter lower case, the second in caps, third in lower, 4th in caps, etc.
+Inputs: name
+Outputs: name in uppercase, name in reverse order, number of characters in name, name arranged such that first letter lower case, the second in caps, third in lower, 4th in caps, etc.
+Formulas: none
+
+start processing
+INPUT user text entry
+REPEAT character[subscript] is not equal to '\0'
+	IF character[subscript] is greater than 90
+		SET temp = letter[subscript] - 32
+		DISPLAY temp
+		ADD 1 to accumulator
+		INCREMENT subscript
+	END-IF
+	ELSE-IF
+		SET temp = letter[subscript]
+		DISPLAY temp
+		ADD 1 to accumulator
+		INCREMENT subscript
+	END-IF
+END-REPEAT
+SET count = accumulator - 1
+REPEAT as long as count is greater than or equal to zero
+	SET temp = letter[count]
+	DISPLAY temp
+	DECREMENT count
+END-REPEAT
+SET count = 0
+SET flag = true
+REPEAT as long as count is less than or equal to accumulator - 1
+	IF letter[count] greater than or equal to 90 and flag set to true
+		SET temp = letter[count] - 32
+		DISPLAY temp
+		SET flag = false
+	END-IF
+	ELSE-IF letter[count] is greater than 90 and flag is set to false
+		SET temp = letter[count]
+		DISPLAY temp
+		SET flag to true
+	END-IF
+INCREMENT count
+END-REPEAT
+SET flag = true
+SET count = 0
+REPEAT while count is less than or equal to accumulator - 1
+	IF letter[count] is less than or equal to 90 and flag set to true
+		SET temp = letter[count]
+		DISPLAY temp
+		SET flag = false
+	END-IF
+	ELSE-IF letter[count] is less than or equal to 90 and flag set to false
+		SET temp = letter[count] + 32
+		DISPLAY temp
+		SET flag = true
+	END-IF
+INCREMENT count
+END-REPEAT
+stop processing

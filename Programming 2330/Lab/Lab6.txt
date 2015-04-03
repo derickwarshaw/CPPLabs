@@ -1,0 +1,39 @@
+Problem: Read in 4 digit student numbers and gpa scores from a data file into two parallel arrays.
+         Once arrays are populated, sort the arrays in ascending order by GPA score and print the results to the screen.
+Inputs: data from txt file that user specifies
+Outputs: data assorted in ascending order by GPA
+Formulas: none
+
+start processing
+INPUT from user what the name of the data file is they want to use for file input
+REPEAT as long as the counter for the loop is less than the array size and stop flag is set to false
+	INPUT student id from file
+	INPUT gpa from file
+	IF gpa is greater than 99.0
+		SET stop flag = true
+	END-IF
+END-REPEAT
+SET loops = 1
+DO UNTIL loops are greater than number of array elements
+	SET subscript = 0
+	DO WHILE subscript is less than number of array elements - 1
+		IF array(subscript) for gpa is greater than array(subscript + 1) for gpa THEN
+			SET the following instructions for both array(subscript) for gpa and array(subscript) for student id
+			SET temp = array(subscript)
+			SET array(subscript) = array(subscript + 1)
+			SET array(subscript + 1) = temp
+		END-IF
+		INCREMENT subscript
+	END-DO
+	INCREMENT loops
+END-DO
+SET stop showing flag = false
+SET subscript = 0
+REPEAT while counter is less than number of array elements and stop showing flag = false
+	IF array(subscript) for gpa is greater than 99.0 THEN
+	SET flag to stop showing = true
+	END-IF
+	IF array(subscript) for gpa is less than 99.0 THEN
+	DISPLAY array(subscript) for student id and array(subscript) for gpa
+END-REPEAT
+stop processing

@@ -1,0 +1,24 @@
+Problem: Program that finds and outputs three digit integers that are equal to the sum of the cubes of their digits
+Inputs: none
+Outputs: numbers that equal the sum of the cubes of their digits
+Formulas: extract first digit = original number / 100
+          extract second digit = (remainder of (original number / 100)) / 10
+          extract third digit = (remainder of (remainder of the original number / 100) / 10)
+          sum of cubes = (first digit extracted * first digit extracted * first digit extracted) +
+                         (second digit extracted * second digit extracted * second digit extracted)+
+                         (third digit extracted * third digit extracted * third digit extracted)
+start
+SET original number equal to 100
+SET number used for comparison to 0
+SET first digit broken out to 0
+SET second digit broken out to 0
+SET third digit broken out to 0
+REPEAT as long as original number is less than or equal to 999
+	SET first digit broken out equal to extract first digit
+	SET second digit broken out equal to extract second digit
+	SET third digit broken out equal to extract third digit
+	SET number used for comparison equal to sum of cubes
+	IF comparison number is equal to original number
+		DISPLAY number used for comparison
+	END-IF
+	SET original number equal to original number plus 1

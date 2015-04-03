@@ -1,0 +1,19 @@
+Problem: get number of bacteria present at beginning of observation from user and compute number of bacteria in the culture 
+	 after each of the first 10 days. Display output in form of table.
+Inputs:  number of bacteria present at beginning of observation.
+Outputs: number of bacteria present after 10 days
+Formulas: number of bacteria at end of day = number of bacteria at beginning * 2 ^ t/10 where t is the day
+
+start
+INPUT number of bacteria present at beginning of observation
+REPEAT while number of starting bacteria is less than 1
+	OUTPUT you cannot enter less than 1
+	GET number of starting bacteria
+END-REPEAT
+REPEAT as long as day is less than or equal to 10
+	 	SET day equal to 1
+		CALCULATE number of bacteria at beginning * 2 ^ t/10 where t is the day
+		DISPLAY number of bacteria present
+		Add 1 to day
+END-REPEAT
+stop

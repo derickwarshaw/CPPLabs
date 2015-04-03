@@ -1,0 +1,35 @@
+Problem: create a calculator that adds, subtracts, multiplies, and divides
+Inputs: number1, number2, choice
+Outputs:result
+Formulas: NONE
+
+start
+GET choice
+IF user selected A
+	GET first number
+	GET second number
+	OUTPUT the sum of the two numbers
+ELSE
+	IF user selected S
+		GET first number
+		GET second number
+		OUTPUT the difference of the two numbers
+	ELSE
+		IF user selected M
+			GET first number
+			GET second number
+			OUTPUT the product of the two numbers	
+		ELSE
+			IF user selected D
+				GET first number
+				GET second number
+				IF second number equals zero
+					OUTPUT error message
+				ELSE			
+					OUTPUT the sum of the quotient of the two numbers
+				END-IF
+			END-IF
+		END-IF
+	END-IF
+END-IF
+stop

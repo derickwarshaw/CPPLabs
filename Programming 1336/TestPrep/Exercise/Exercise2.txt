@@ -1,0 +1,11 @@
+Derick Warshaw
+Exercise 2
+Programming 1336
+
+33. 7
+
+34. 28
+
+35. 365
+
+36. The error is that the pseudocode attempts to calculate length multiplied by width to find area before it has asked the user to input that information.
